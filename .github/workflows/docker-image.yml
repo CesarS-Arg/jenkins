@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag sosix84/jenkins:latest-plugins
     - name: Publish the Docker image
-      run: docker push sosix84/jenkins:latest-plugins
+      run: docker login docker.io; docker push sosix84/jenkins:latest-plugins
