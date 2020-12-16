@@ -15,4 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag jenkins:latest-plugins
+      run: docker build . --file Dockerfile --tag sosix84/jenkins:latest-plugins
+    - name: Publish the Docker image
+      run: docker push sosix84/jenkins:latest-plugins
